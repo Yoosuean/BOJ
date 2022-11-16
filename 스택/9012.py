@@ -1,26 +1,25 @@
+# 스택개념 사용 코드
 import sys
 
 n=int(sys.stdin.readline())
-arr=[]
 
 for _ in range(n):
-    count=0
-    arr=list(sys.stdin.readline())
-    if arr[0]==')':
-        print('NO')
-        continue;
-    else:
-        for i in range(len(arr)-1):
-            if arr[i]=='(':
-                count+=1
+    stack=[]
+    string=list(sys.stdin.readline())
+    for ch in string:
+        if ch == '(':
+            stack.append('(')
+        elif ch==')':
+            if stack:
+                stack.pop()
             else:
-                count-=1
-                if count<0:
-                    break;
-    if count==0:
-        print('YES')
+                print("NO")
+                break;
     else:
-        print('NO')
+        if not stack:
+                print("YES")   
+        else:   
+            print("NO")
         
         
         
