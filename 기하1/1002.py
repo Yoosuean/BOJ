@@ -10,10 +10,9 @@ for _ in range(t):
 
     if dis==0 and r1==r2:
         print(-1)
-    elif dis>r1+r2 or dis==0:
-        print(0)
-    elif dis ==r1+r2 or dis+min(r1,r2)==max(r1,r2):
+    elif dis ==r1+r2 or (dis==abs(r1-r2)):
         print(1)
-    else: 
+    elif abs(r1-r2) < dis < r1+r2:
         print(2)
-
+    else: # dis>r1+r2 or dis==0 or dis<(abs(r1-r2))
+        print(0)
