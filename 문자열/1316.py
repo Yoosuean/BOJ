@@ -8,4 +8,5 @@ for _ in range(n):
             pass
         elif word[i] in word[i+1:]:
             cnt-=1
+            break
 print(cnt)
