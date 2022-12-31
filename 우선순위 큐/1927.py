@@ -13,4 +13,4 @@ for _ in range(n):
         if len(arr)>=1:
             print(hq.heappop(arr))
         else:
-            print(0)
+            print(0) 
