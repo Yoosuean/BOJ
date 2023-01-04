@@ -23,4 +23,4 @@ while True:
     if a==-1 and b==-1 and c==-1:
         break
     res=w(a,b,c)
-    print("w(%d,%d,%d)=%d" %(a,b,c,res))
+    print("w(%d, %d, %d) = %d" %(a,b,c,res))
