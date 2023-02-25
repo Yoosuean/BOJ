@@ -1,4 +1,4 @@
-#BOJ 2170 스위핑
+#BOJ 2170 선긋기
 import sys
 input=sys.stdin.readline
 n=int(input())
