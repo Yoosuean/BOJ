@@ -1,3 +1,5 @@
 main.cpp
 *.xcodeproj
 
+# ignore al files in the .chp/ directory
+**/.cph/
