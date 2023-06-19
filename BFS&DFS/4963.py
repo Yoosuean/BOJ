@@ -6,7 +6,7 @@ dy=[0,-1,0,1,1,-1,1,-1]
 
 def bfs(x,y,board):
     queue=deque([[x,y]])
-    board[x][y]=2
+    board[x][y]=0
 
     while queue:
         x,y=queue.popleft()
@@ -16,13 +16,12 @@ def bfs(x,y,board):
             if nx<0 or nx>=b or ny<0 or ny>=a:
                 continue
             if board[nx][ny]==1:
-                board[nx][ny]=2
+                board[nx][ny]=0
                 queue.append((nx,ny))
+    return 1
 
-a=0
-b=0
-cnt=0
 while True:
+    cnt=0
     board=[]
     a,b=map(int,input().split())
     if a+b==0:
